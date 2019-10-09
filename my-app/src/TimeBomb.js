@@ -16,29 +16,28 @@ function BombCount() {
 
 }
 
-
 let one = count % 10;
 let two = Math.floor((count % 100) / 10);
-let three = Math.floor((count % 1000) / 100)
+let three = Math.floor((count % -1000) / 100)
 
 return (
     <>
-        <span class="fa-stack fa-lg">
+        <div class="fa-stack fa-lg d-flex justify-content-around">
             <i class="fa fa-bomb fa-5x">{count}</i>
             <i class="fa fa-frown icon-white"></i>
-        </span>
-        <span class="fa-stack fa-lg">
+        </div>
+        <div class="fa-stack fa-lg d-flex justify-content-around">
             <i class="fa fa-bomb fa-5x">{three}</i>
             <i class="fa fa-frown icon-white"></i>
-        </span>
-        <span class="fa-stack fa-lg">
+        </div>
+        <div class="fa-stack fa-lg d-flex justify-content-around">
             <i class="fa fa-bomb fa-5x">{two}</i>
             <i class="fa fa-frown icon-white"></i>
-        </span>
-        <span class="fa-stack fa-lg">
+        </div>
+        <div class="fa-stack fa-lg d-flex justify-content-around">
             <i class="fa fa-bomb fa-5x">{one}</i>
             <i class="fa fa-frown icon-white"></i>
-        </span>
+        </div>
             <div onLoad={() => setCount(count + 1)}>
             {/*<p>You have this long until  {count}  {three} {two} {one} kaboom</p>*/}
     </div>
